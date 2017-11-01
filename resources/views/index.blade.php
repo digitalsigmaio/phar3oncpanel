@@ -5,7 +5,7 @@
         <div style="padding-top: 50px;">
 			<div class="col-md-6 col-md-offset-6 pick">
 				<div class="row">
-					<h1>Pick a Day</h1>
+					<h1>أختار يوم</h1>
 				</div>
 				<div class="row">
 					<form action="selectedDate" method="post">
@@ -18,7 +18,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-default">Select</button>
+							<button type="submit" class="btn btn-default">تنفيذ</button>
 						</div>
 					</form>
 				</div>

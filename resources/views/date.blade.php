@@ -33,7 +33,7 @@
                 
 				<div class="row">
 					<div class="form-group col-md-6 col-md-offset-6">
-						<label for="zodiac">Zodiac</label>
+						<label for="zodiac">البرج</label>
 						<select class="form-control" id="zodiac" name="numberborg">
 							@foreach($zodiacVars as $key => $value)
 								<option value="{{ $key }}">{{ $value }}</option>
@@ -45,11 +45,11 @@
 					</div>
 				</div>
                 <div class="form-group">
-                    <label for="body">Body</label>
+                    <label for="body">حظك اليوم</label>
                     <textarea class="form-control" id="body" name="title" rows="10" minlength="70" required></textarea>
                 </div>
 				<div class="form-group">
-                    <button type="submit" class="btn btn-default">Add Zodiac</button>
+                    <button type="submit" class="btn btn-default">أضف حظك اليوم</button>
                 </div>
             </form>
         </div> 
@@ -64,7 +64,7 @@
                 <th>Title</th>
                 <th>Day</th>
 				<th>Month</th>
-				<th>Zodiac Number</th>
+				<th>Zodiac</th>
                 <th>Edit</th>
                 <th>x</th>
             </tr>
@@ -76,16 +76,16 @@
                     <td>{{ $zodiac->title }}</td>
                     <td>{{ $zodiac->day }}</td>
 					<td>{{ $zodiac->month }}</td>
-					<td>{{ $zodiac->numberborg }}</td>
-                    <td><a href="zodiacEdit/{{ $zodiac->id }}" class="btn btn-default">Edit</a></td>
-                    <td><a href="zodiacDelete/{{ $zodiac->id }}" class="btn btn-danger deleteItem">Delete</a></td>
+					<td>{{ \App\Zodiac::$zodiacVars[$zodiac->numberborg] }}</td>
+                    <td><a href="zodiacEdit/{{ $zodiac->id }}" class="btn btn-default">تحرير</a></td>
+                    <td><a href="zodiacDelete/{{ $zodiac->id }}" class="btn btn-danger deleteItem">مسح</a></td>
                 </tr>
             @endforeach
             </tbody>
         </table>
 		
         @else
-            <h4>There is no Zodiac in the specified date.</h4>
+            <h4>لا يوجد بيانات لأى برج لهذا التاريخ</h4>
         @endif
     </div>
 @endsection

@@ -40,7 +40,7 @@ class ZodiacController extends Controller
 			['numberborg', '=', $request->numberborg],
 		])->get();
 		if($check->count() > 0) {
-			return redirect()->back()->withErrors('Zodiac was been entered for the specifed date.');
+			return redirect()->back()->withErrors('يوجد بالفعل حظك اليوم لهذا البرج');
 		}
 		$zodiac = new Zodiac;
 		$zodiac->title = $request->title;
@@ -49,12 +49,11 @@ class ZodiacController extends Controller
 		$zodiac->numberborg = $request->numberborg;
 		
 		if($zodiac->save()){
-			session()->flash('message', 'Zodiac has been added successfully');
+			session()->flash('message', 'تم إضافة حظك اليوم لهذا البرج');
 			return redirect()->back();
 		} else {
-			return redirect()->back()->withErrors('Could not add zodiac something went wrong please
-										contact your administrator');
-		}	
+			return redirect()->back()->withErrors('لم يتم إضافة حظك اليوم لوجود خطأ ما من فضلك تواصل مع المختص');
+		}
 	}
 	
 	public function zodiacEdit($id) {
@@ -70,11 +69,10 @@ class ZodiacController extends Controller
 		$zodiac->numberborg = $request->numberborg;
 		
 		if($zodiac->save()){
-			session()->flash('message', 'Zodiac has been updated successfully');
+			session()->flash('message', 'تم تحرير حظك اليوم بنجاح');
 			return redirect()->back();
 		} else {
-			return redirect()->back()->withErrors('Could not update zodiac something went wrong please
-										contact your administrator');
+			return redirect()->back()->withErrors('لم يتم إضافة حظك اليوم لوجود خطأ ما من فضلك تواصل مع المختص');
 		}
 		
 	}
@@ -84,7 +82,7 @@ class ZodiacController extends Controller
 		
 		$zodiac->delete();
 		
-		session()->flash('message', 'Zodiac has been deleted successfully');
+		session()->flash('message', 'تم مسح حظك اليوم لهذا البرج بنجاح');
 		return redirect()->back();
 	}
 	

@@ -4,8 +4,8 @@
     <div class="row">
         <div class="col-md-6 col-ms-6 content-insert pull-right">
             <div class="row">
-                <ul class="nav navbar-nav">
-                    <li><a href="zodiacNew" class="btn btn-primary">New Zodiac</a></li>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="zodiacNew" class="btn btn-primary">أضف حظك اليوم</a></li>
                 </ul>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 <th>Title</th>
                 <th>Day</th>
 				<th>Month</th>
-				<th>Zodiac Number</th>
+				<th>Zodiac</th>
                 <th>Edit</th>
                 <th>x</th>
             </tr>
@@ -43,16 +43,16 @@
                     <td>{{ $zodiac->title }}</td>
                     <td>{{ $zodiac->day }}</td>
 					<td>{{ $zodiac->month }}</td>
-					<td>{{ $zodiac->numberborg }}</td>
-                    <td><a href="zodiacEdit/{{ $zodiac->id }}" class="btn btn-default">Edit</a></td>
-                    <td><a href="zodiacDelete/{{ $zodiac->id }}" class="btn btn-danger deleteItem">Delete</a></td>
+					<td>{{ \App\Zodiac::$zodiacVars[$zodiac->numberborg] }}</td>
+                    <td><a href="zodiacEdit/{{ $zodiac->id }}" class="btn btn-default">تحرير</a></td>
+                    <td><a href="zodiacDelete/{{ $zodiac->id }}" class="btn btn-danger deleteItem">مسح</a></td>
                 </tr>
             @endforeach
             </tbody>
         </table>
 		{{ $zodiacs->links() }}
         @else
-            <h4>There is no Zodiac in the record yet</h4>
+            <h4>لم يتم تسجيل حظك اليوم داخل قاعدة البيانات</h4>
         @endif
     </div>
 @endsection
