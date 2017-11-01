@@ -36,6 +36,12 @@
 	text-overflow: ellipsis;
 }
 
-text-area {
+textarea {
 	resize: none;
+}
+
+@media screen and (max-width: 780px) {
+    .pick {
+        margin-right:20px;
+    }
 }

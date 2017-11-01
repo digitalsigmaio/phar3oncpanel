@@ -34,6 +34,8 @@
             <a href="{{ route('home') }}" class="navbar-brand">Abrag Phar3on</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-6 content-insert">
+        <div class="col-md-6 col-ms-6 content-insert pull-right">
             <div class="row">
                 <ul class="nav navbar-nav">
                     <li><a href="zodiacNew" class="btn btn-primary">New Zodiac</a></li>
@@ -21,7 +21,7 @@
 	
 	
 	
-    <div class="row artist-details" id="artistDetails">
+    <div class="artist-details" id="artistDetails">
         @if(count($zodiacs) > 0)
         <hr>
         <table class="table table-striped table-hover ">

@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div style="padding-top: 50px;">
-			<div class="col-md-6 col-md-offset-6">
+			<div class="col-md-6 col-md-offset-6 pick">
 				<div class="row">
 					<h1>Pick a Day</h1>
 				</div>
