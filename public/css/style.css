@@ -54,6 +54,7 @@ table th, table td {
     position: relative;
     top: 5px;
     right: 150px;
+	width: 400px;
 }
 
 @media only screen and (max-width: 991px){
