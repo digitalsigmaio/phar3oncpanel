@@ -49,3 +49,21 @@ textarea {
 table th, table td {
     text-align: center;
 }
+
+#navbar-main form {
+    position: relative;
+    top: 5px;
+    right: 150px;
+}
+
+@media only screen and (max-width: 991px){
+    #navbar-main form {
+        right: 100px;
+    }
+}
+
+@media only screen and (max-width: 786px){
+    #navbar-main form {
+        display: none;
+    }
+}

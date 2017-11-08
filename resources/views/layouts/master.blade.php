@@ -38,15 +38,24 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
+
         <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li>
                     <a href="{{ route('zodiac') }}">Zodiac</a>
                 </li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{route('logout')}}">Logout</a></li>
             </ul>
+            <form action="selectedDate" method="post" class="form-inline">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <input class="form-control" type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group"><button type="submit" class="btn btn-info">تنفيذ</button></div>
+            </form>
         </div>
 
     </div>
