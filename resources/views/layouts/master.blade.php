@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/cosmo.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset ('css/custom.min.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
-
+    <link rel="icon" href="favicon.png">
 
     <script>
 
